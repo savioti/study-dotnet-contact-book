@@ -1,0 +1,26 @@
+﻿@model IEnumerable<AgendaContatos.Models.Contato>
+
+@{
+    ViewBag.Title = "ListarContatos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Contatos encontrados:</h3>
+
+<table class="table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var contato in Model)
+        {
+        <tr>
+            <td>@contato.Nome</td>
+            <td>@contato.Numero</td>
+        </tr>
+        }
+    </tbody>
+</table>
